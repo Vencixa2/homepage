@@ -1,22 +1,17 @@
-function setAsBackground() {
-    const fileInput = document.getElementById('imageInput');
-    const file = fileInput.files[0];
-  
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        document.body.style.backgroundImage = `url(${e.target.result})`;
-        document.body.style.backgroundSize = 'cover';
-      };
-      reader.readAsDataURL(file);
+const popup = document.getElementById("content");
+    function togglePopup() {
+        popup.classList.toggle("active");
     }
+    function removeClass() {
+        popup.classList.remove("active");
+    }
+
+    function updateClock() {
+      let currentTime = new Date().toLocaleTimeString(); // Get current local time
+      document.querySelector('#clock span').innerText = currentTime;
   }
-
-    const openPopupBtn = document.getElementsById("openPopup");
-    const popup = document.getElementsById("popup");
-
-        openPopupBtn.addEventListener("click", functionOpen);
-
-        function functionOpen() {     
-            popup.style.display = "block";
-        }
+  
+  // Update the clock initially and then every second
+  updateClock();
+  setInterval(updateClock, 1000);
+  

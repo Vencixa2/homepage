@@ -8,47 +8,60 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/eade4dcf70.js" crossorigin="anonymous"></script>
 
         <!--Fonts-->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     </head>
-    <body>
+    <body id="body">
+
+        <!--Search Bar-->
 
         <form class="form" action="https://google.com/search" method="get" target="_blank">
             <input type="hidden" name="sitesearch" />
-            <input class="search-bar" type="text" name="q" placeholder="search..." class="search-bar"/>
-            <input class="search-btn" type="submit" value="GO" class="submit-button">
+            <input class="search-bar" type="text" name="q" placeholder="Search the web" class="search-bar"/>
         </form>
 
-        <div class="popup" id="popup">
-            <input type="file" id="imageInput">
-            <button class="set-as-bg" onclick="setAsBackground()">Change</button>
+        <!--Bookmarks-->
+
+        <div class="bookmark-container" id="bookmarks">
+
+            <a href="https://www.youtube.com" id="bookmark" target="_blank"><i class="fa-brands fa-youtube"></i></a><!--
+            --><a href="https://mail.google.com/mail/u/1/#inbox" id="bookmark" target="_blank"><i class="fa-solid fa-envelope"></i></a><!--
+            --><a href="https://twitter.com/?lang=en" id="bookmark" target="_blank"><i class="fa-brands fa-x-twitter"></i></a><!--
+            --><a href="https://www.instagram.com/" id="bookmark" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
         </div>
 
+        <!--Clock-->
+
+            <div class="clock" id="clock">
+                
+                <span>00</span>
+            
+            </div>
+
+        <!--Popup-->
+
+        <div>
+            <div class="popup" id="popup">
+
+
+
+            </div>
+        </div>
         <script src="myScript.js" async defer></script>
         <script src="popup.js" async defer></script>
-
-        <script>
-
-const openPopupBtn = document.getElementsById('openPopup');
-const popup = document.getElementsById('popup');
-
-    openPopupBtn.addEventListener('click', () => {
-        popup.style.display = 'block';
-    });
-
-        </script>
-
 
     </body>
 
     <footer>
         <div class="footer-content">
 
-            <button class="change-background" onclick="openPopup()" id="openPopup">Change Background</button>
+
 
         </div>
     </footer>
