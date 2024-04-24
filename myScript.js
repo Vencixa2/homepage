@@ -17,3 +17,13 @@ setInterval(()=>{
     mins.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
     secs.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
 }, 1000)
+
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const options = {
+        uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
+      };
+    const callback = (EmbedController) => {};
+    IFrameAPI.createController(element, options, callback);
+  };
+  

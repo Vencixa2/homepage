@@ -12,13 +12,19 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
 
-            new Crate({
+        
+
+
+            const button = new Crate({
                 server: '1178678624065433691', // Opasnite
-                channel: '1178678624065433693' // #общи
-    })
+                channel: '1178678624065433693', // #общи          
+                location: ["bottom", "left"]
+            })
 
         </script>
 
+        <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+        
         <!--Fonts-->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,8 +80,10 @@
     <footer>
 
         <div class="footer-content">
+            <div id="embed-iframe">
 
+            </div>
         </div>
-        
+
     </footer>
 </html>
