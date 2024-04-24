@@ -10,6 +10,15 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/eade4dcf70.js" crossorigin="anonymous"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+
+            new Crate({
+                server: '1178678624065433691', // Opasnite
+                channel: '1178678624065433693' // #общи
+    })
+
+        </script>
+
         <!--Fonts-->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,11 +47,15 @@
 
         <!--Clock-->
 
-            <div class="clock" id="clock">
+        <div class="clock" id="clock">
                 
-                <span>00</span>
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="mins">00</span>
+            <span>:</span>
+            <span id="secs">00</span>
             
-            </div>
+         </div>           
 
         <!--Popup-->
 
@@ -59,10 +72,10 @@
     </body>
 
     <footer>
+
         <div class="footer-content">
 
-
-
         </div>
+        
     </footer>
 </html>
