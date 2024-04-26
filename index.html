@@ -12,9 +12,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
 
-        
-
-
             const button = new Crate({
                 server: '1178678624065433691', // Opasnite
                 channel: '1178678624065433693', // #общи          
@@ -22,8 +19,6 @@
             })
 
         </script>
-
-        <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
         
         <!--Fonts-->
 
@@ -61,17 +56,18 @@
             <span>:</span>
             <span id="secs">00</span>
             
-         </div>           
+        </div>           
 
-        <!--Popup-->
+        <button class="spotify-button" id="spotify-button" onclick="togglePopup()"></button>
 
-        <div>
-            <div class="popup" id="popup">
+        <div class="spotify-wrapper" id="spotify">
 
+            <iframe class="spotify-playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1kBOkFPOIGk7O3Gq7DYTML?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+           
+            <i class="fas fa-times" onclick="togglePopup()" id="close-spotify"></i> 
 
-
-            </div>
         </div>
+
         <script src="myScript.js" async defer></script>
         <script src="popup.js" async defer></script>
 
@@ -80,10 +76,8 @@
     <footer>
 
         <div class="footer-content">
-            <div id="embed-iframe">
 
-            </div>
         </div>
 
     </footer>
-</html>
+</html> 

@@ -1,6 +1,10 @@
-const popup = document.getElementById("content");
+const popup = document.getElementById("spotify");
+const button = document.getElementById("spotify-button");
+const closeSpotify = document.getElementById("close-spotify");
     function togglePopup() {
         popup.classList.toggle("active");
+        button.classList.toggle("active");
+        closeSpotify.classList.toggle("active");
     }
     function removeClass() {
         popup.classList.remove("active");
@@ -26,4 +30,3 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
     const callback = (EmbedController) => {};
     IFrameAPI.createController(element, options, callback);
   };
-  
