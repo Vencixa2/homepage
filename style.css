@@ -1,7 +1,12 @@
+html {
+    height: 100%;
+}
 body {
     font-family: "Roboto", sans-serif;
     overflow: hidden;
-    background-color: #0f0f12;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(54,6,6,1) 225%);
 }
 @media only screen and (max-width: 900px) {
     h1{
